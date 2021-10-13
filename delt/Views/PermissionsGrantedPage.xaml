@@ -21,35 +21,6 @@
             RowDefinitions="44,Auto,Auto,Auto,Auto"
             VerticalOptions="CenterAndExpand">
 
-
-
-            <!--<Path
-            Margin="0,0,0,100"
-            Grid.Row="2"
-            Grid.Column="0"
-            WidthRequest="48"
-            HeightRequest="46"
-            HorizontalOptions="Center"
-            VerticalOptions="Center"
-            Stroke="#D80027"
-            Fill="#D80027"
-            Aspect="None"
-            Data="M24 0C10.7451 0 0 10.7451 0 24C0 37.2547 10.7451 47.9999 24 47.9999C37.2547 47.9999 47.9999 37.2547 47.9999 24C47.9858 10.7511 37.2489 0.0141629 24 0ZM24 44.5714C12.6387 44.5714 3.42854 35.3612 3.42854 24C3.42854 12.6387 12.6387 3.42854 24 3.42854C35.3612 3.42854 44.5714 12.6387 44.5714 24C44.5591 35.3562 35.3562 44.5591 24 44.5714Z" />
-
-        <Path
-            Margin="0,0,0,100"
-            Grid.Row="2"
-            Grid.Column="0"
-            WidthRequest="23"
-            HeightRequest="23"
-            HorizontalOptions="Center"
-            VerticalOptions="Center"
-            Stroke="#D80027"
-            StrokeThickness="3"
-            StrokeLineCap="Round"
-            Aspect="None"
-            Data="M2 21L21 2M2 2L21 21" />-->
-
             <VapoliaSVG:SvgImage
                 Grid.Row="1"
                 Grid.Column="0"
