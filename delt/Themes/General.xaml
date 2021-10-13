@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ResourceDictionary
+    x:Class="delt.Themes.General"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:xct="http://xamarin.com/schemas/2020/toolkit">
+
+    <Style
+        x:Key="BaseStyle"
+        ApplyToDerivedTypes="True"
+        TargetType="Element">
+        <Setter Property="Shell.BackgroundColor" Value="{DynamicResource SystemBackground}" />
+        <Setter Property="Shell.TitleColor" Value="{DynamicResource PageTitleTextColor}" />
+        <Setter Property="Shell.ForegroundColor" Value="{DynamicResource BackButton}" />
+    </Style>
+
+
+    <!--  Style of button  -->
+    <Style x:Key="buttonStyle" TargetType="Button">
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal">
+                        <VisualState.Setters>
+                            <Setter Property="FontSize" Value="17" />
+                            <Setter Property="CornerRadius" Value="6" />
+                            <Setter Property="BorderColor" Value="{DynamicResource Link}" />
+                            <Setter Property="BorderWidth" Value="0" />
+                            <Setter Property="xct:ShadowEffect.Color" Value="{DynamicResource Link}" />
+                            <Setter Property="xct:ShadowEffect.OffsetY" Value="4" />
+                            <Setter Property="xct:ShadowEffect.Opacity" Value="0.29" />
+                            <Setter Property="BackgroundColor" Value="{DynamicResource Link}" />
+                            <Setter Property="TextColor" Value="{DynamicResource LightText}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Pressed">
+                        <VisualState.Setters>
+                            <Setter Property="FontSize" Value="17" />
+                            <Setter Property="CornerRadius" Value="6" />
+                            <Setter Property="BorderColor" Value="{DynamicResource Link}" />
+                            <Setter Property="BorderWidth" Value="1" />
+                            <Setter Property="xct:ShadowEffect.Color" Value="{DynamicResource Link}" />
+                            <Setter Property="xct:ShadowEffect.OffsetY" Value="4" />
+                            <Setter Property="xct:ShadowEffect.Opacity" Value="0.29" />
+                            <Setter Property="BackgroundColor" Value="{DynamicResource Link}" />
+                            <Setter Property="TextColor" Value="{DynamicResource LightText}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="FontSize" Value="17" />
+                            <Setter Property="CornerRadius" Value="6" />
+                            <Setter Property="Opacity" Value="0.35" />
+                            <Setter Property="BorderColor" Value="{DynamicResource Link}" />
+                            <Setter Property="BorderWidth" Value="1" />
+                            <Setter Property="BackgroundColor" Value="{DynamicResource Link}" />
+                            <Setter Property="TextColor" Value="{DynamicResource LightText}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+
+    <Style x:Key="buttonStyleLight" TargetType="Button">
+        <Setter Property="FontSize" Value="17" />
+        <Setter Property="BackgroundColor" Value="Transparent" />
+        <Setter Property="TextColor" Value="{DynamicResource Link}" />
+    </Style>
+
+    <Style x:Key="buttonStyleLightRed" TargetType="Button">
+        <Setter Property="FontSize" Value="17" />
+        <Setter Property="BackgroundColor" Value="Transparent" />
+        <Setter Property="TextColor" Value="{DynamicResource SystemRed}" />
+    </Style>
+
+
+    <!--  Longines Design System: Font Styles  -->
+    <!--  Font Style: largeTitle  -->
+    <Style x:Key="largeTitle" TargetType="Label">
+        <Setter Property="FontFamily">
+            <Setter.Value>
+                <OnPlatform x:TypeArguments="x:String">
+                    <On Platform="iOS">.SFUI-Bold</On>
+                    <On Platform="Android">sans-serif-medium</On>
+                </OnPlatform>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="FontSize" Value="34" />
+        <Setter Property="LineHeight" Value="1.2" />
+        <Setter Property="TextColor" Value="{DynamicResource Label}" />
+    </Style>
+
+    <!--  Font Style: title1  -->
+    <Style x:Key="title1" TargetType="Label">
+        <Setter Property="FontFamily">
+            <Setter.Value>
+                <OnPlatform x:TypeArguments="x:String">
+                    <On Platform="iOS">.SFUI-Bold</On>
+                    <On Platform="Android">sans-serif-medium</On>
+                </OnPlatform>
+            </Setter.Value>
+        </Setter>
+        <!--  Intended Font Size: 28  -->
+        <Setter Property="FontSize" Value="Title" />
+        <Setter Property="LineHeight" Value="1.21" />
+        <Setter Property="TextColor" Value="{DynamicResource Label}" />
+    </Style>
+
+    <!--  Font Style: title2  -->
+    <Style x:Key="title2" TargetType="Label">
+        <Setter Property="FontFamily">
+            <Setter.Value>
+                <OnPlatform x:TypeArguments="x:String">
+                    <On Platform="iOS">.SFUI-Bold</On>
+                    <On Platform="Android">sans-serif-medium</On>
+                </OnPlatform>
+            </Setter.Value>
+        </Setter>
+        <!--  Intended Font Size: 22 (iOS) / 24 (Android)  -->
+        <Setter Property="FontSize" Value="Large" />
+        <Setter Property="LineHeight" Value="1.27" />
+        <Setter Property="TextColor" Value="{DynamicResource Label}" />
+    </Style>
+
+    <!--  Font Style: title3  -->
+    <Style x:Key="title3" TargetType="Label">
+        <Setter Property="FontFamily">
+            <Setter.Value>
+                <OnPlatform x:TypeArguments="x:String">
+                    <On Platform="iOS">.SFUI-Bold</On>
+                    <On Platform="Android">sans-serif-medium</On>
+                </OnPlatform>
+            </Setter.Value>
+        </Setter>
+        <!--  Fixed Font Size As No Matching Named Font Size Available  -->
+        <Setter Property="FontSize" Value="20" />
+        <Setter Property="LineHeight" Value="1.2" />
+        <Setter Property="TextColor" Value="{DynamicResource Label}" />
+    </Style>
+
+    <!--  Font Style: headline  -->
+    <Style x:Key="headline" TargetType="Label">
+        <Setter Property="FontFamily">
+            <Setter.Value>
+                <OnPlatform x:TypeArguments="x:String">
+                    <On Platform="iOS">.SFUI-Semibold</On>
+                    <On Platform="Android">sans-serif-medium</On>
+                </OnPlatform>
+            </Setter.Value>
+        </Setter>
+        <!--  Intended Font Size: 17 (iOS) / 16 (Android)  -->
+        <Setter Property="FontSize" Value="Body" />
+        <Setter Property="LineHeight" Value="1.29" />
+        <Setter Property="TextColor" Value="{DynamicResource Label}" />
+    </Style>
+
+    <!--  Font Style: subheadline  -->
+    <Style x:Key="subheadline" TargetType="Label">
+        <Setter Property="FontFamily">
+            <Setter.Value>
+                <OnPlatform x:TypeArguments="x:String">
+                    <On Platform="iOS">.SFUI-Regular</On>
+                    <On Platform="Android">sans-serif-medium</On>
+                </OnPlatform>
+            </Setter.Value>
+        </Setter>
+        <!--  Intended Font Size: 15 (iOS) / 14 (Android)  -->
+        <Setter Property="FontSize" Value="Small" />
+        <Setter Property="LineHeight" Value="1.33" />
+        <Setter Property="TextColor" Value="{DynamicResource Label}" />
+    </Style>
+
+    <!--  Font Style: body  -->
+    <Style x:Key="body" TargetType="Label">
+        <Setter Property="FontFamily" Value="sans-serif" />
+        <!--  Intended Font Size: 17 (iOS) / 16 (Android)  -->
+        <Setter Property="FontSize" Value="Body" />
+        <Setter Property="LineHeight" Value="1.41" />
+        <Setter Property="TextColor" Value="{DynamicResource Label}" />
+    </Style>
+
+    <!--  Font Style: bodyMedium  -->
+    <Style x:Key="bodyMedium" TargetType="Label">
+        <Setter Property="FontFamily">
+            <Setter.Value>
+                <OnPlatform x:TypeArguments="x:String">
+                    <On Platform="iOS">.SFUI-Medium</On>
+                    <On Platform="Android">sans-serif-medium</On>
+                </OnPlatform>
+            </Setter.Value>
+        </Setter>
+        <!--  Intended Font Size: 17 (iOS) / 16 (Android)  -->
+        <Setter Property="FontSize" Value="Body" />
+        <Setter Property="LineHeight" Value="1.41" />
+        <Setter Property="TextColor" Value="{DynamicResource Label}" />
+    </Style>
+
+    <!--  Font Style: bodySmall  -->
+    <Style x:Key="bodySmall" TargetType="Label">
+        <Setter Property="FontFamily" Value="sans-serif" />
+        <!--  Intended Font Size: 14  -->
+        <Setter Property="FontSize" Value="Small" />
+        <Setter Property="LineHeight" Value="1.29" />
+        <Setter Property="TextColor" Value="{DynamicResource Label}" />
+    </Style>
+
+    <!--  Font Style: bodySmallSemibold  -->
+    <Style x:Key="bodySmallSemibold" TargetType="Label">
+        <Setter Property="FontFamily">
+            <Setter.Value>
+                <OnPlatform x:TypeArguments="x:String">
+                    <On Platform="iOS">.SFUI-Semibold</On>
+                    <On Platform="Android">sans-serif-medium</On>
+                </OnPlatform>
+            </Setter.Value>
+        </Setter>
+        <!--  Intended Font Size: 14  -->
+        <Setter Property="FontSize" Value="Small" />
+        <Setter Property="LineHeight" Value="1.29" />
+        <Setter Property="TextColor" Value="{DynamicResource Label}" />
+    </Style>
+
+    <!--  Font Style: caption1  -->
+    <Style x:Key="caption1" TargetType="Label">
+        <Setter Property="FontFamily" Value="sans-serif" />
+        <!--  Intended Font Size: 12  -->
+        <Setter Property="FontSize" Value="Caption" />
+        <Setter Property="LineHeight" Value="1.33" />
+        <Setter Property="TextColor" Value="{DynamicResource SecondaryLabel}" />
+    </Style>
+
+    <!--  Font Style: caption1Bold  -->
+    <Style x:Key="caption1Bold" TargetType="Label">
+        <Setter Property="FontFamily">
+            <Setter.Value>
+                <OnPlatform x:TypeArguments="x:String">
+                    <On Platform="iOS">.SFUI-Bold</On>
+                    <On Platform="Android">sans-serif-medium</On>
+                </OnPlatform>
+            </Setter.Value>
+        </Setter>
+        <!--  Intended Font Size: 12  -->
+        <Setter Property="FontSize" Value="Caption" />
+        <Setter Property="LineHeight" Value="1.33" />
+        <Setter Property="TextColor" Value="{DynamicResource SecondaryLabel}" />
+    </Style>
+
+    <!--  Font Style: caption2  -->
+    <Style x:Key="caption2" TargetType="Label">
+        <Setter Property="FontFamily" Value="sans-serif" />
+        <!--  Fixed Font Size for iOS As No Matching Named Font Size Available  -->
+        <Setter Property="FontSize">
+            <Setter.Value>
+                <OnPlatform x:TypeArguments="x:String">
+                    <On Platform="iOS">11</On>
+                    <On Platform="Android">Micro</On>
+                </OnPlatform>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="LineHeight" Value="1.18" />
+        <Setter Property="TextColor" Value="{DynamicResource SecondaryLabel}" />
+    </Style>
+
+    <!--  Font Style: footnote  -->
+    <Style x:Key="footnote" TargetType="Label">
+        <Setter Property="FontFamily" Value="sans-serif" />
+        <!--  Intended Font Size: 13  -->
+        <Setter Property="FontSize" Value="Caption" />
+        <Setter Property="LineHeight" Value="1.38" />
+        <Setter Property="TextColor" Value="{DynamicResource SecondaryLabel}" />
+    </Style>
+
+    <!--  Font Style: footnoteCapitalized  -->
+    <Style x:Key="footnoteCapitalized" TargetType="Label">
+        <Setter Property="FontFamily" Value="sans-serif" />
+        <Setter Property="FontSize" Value="Caption" />
+        <Setter Property="LineHeight" Value="1.38" />
+        <Setter Property="TextTransform" Value="Uppercase" />
+        <Setter Property="TextColor" Value="{DynamicResource SecondaryLabel}" />
+    </Style>
+
+
+</ResourceDictionary>

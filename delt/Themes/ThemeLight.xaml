@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary
+    x:Class="delt.Themes.ThemeLight"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:general="clr-namespace:delt.Themes">
+
+    <Color x:Key="LonginesPrimary">#003150</Color>
+    <Color x:Key="LonginesDesert">#CEAE73</Color>
+    <Color x:Key="SystemRed">#FF3B30</Color>
+    <Color x:Key="SystemOrange">#FF9500</Color>
+    <Color x:Key="SystemGreen">#34C759</Color>
+    <Color x:Key="DarkGreen">#0F930C</Color>
+    <Color x:Key="Label">#000000</Color>
+    <Color x:Key="SecondaryLabel">#993C3C43</Color>
+    <Color x:Key="TertiaryLabel">#4D3C3C43</Color>
+    <Color x:Key="QuaternaryLabel">#2E3C3C43</Color>
+    <Color x:Key="Placeholder">#4D3C3C43</Color>
+    <Color x:Key="BrandOnSystemBackground">#003150</Color>
+    <Color x:Key="SystemBackground">#FFFFFF</Color>
+    <Color x:Key="SecondarySystemBackground">#F7F7F7</Color>
+    <Color x:Key="TertiarySystemBackground">#FFFFFF</Color>
+    <Color x:Key="SystemBackgroundContrast">#000000</Color>
+    <Color x:Key="DarkBrandBackground">#003150</Color>
+    <Color x:Key="DarkBrandSystemBackground">#003150</Color>
+    <Color x:Key="SystemGroupedBackground">#FAFAFA</Color>
+    <Color x:Key="SecondarySystemGroupedBackground">#FFFFFF</Color>
+    <Color x:Key="TertiarySystemGroupedBackground">#F2F2F7</Color>
+    <Color x:Key="Separator">#4A3C3C43</Color>
+    <Color x:Key="OpaqueSeparator">#C6C6C8</Color>
+    <Color x:Key="Link">#006BB7</Color>
+    <Color x:Key="DarkText">#000000</Color>
+    <Color x:Key="LightText">#FFFFFF</Color>
+    <Color x:Key="WhiteBackground">#FFFFFF</Color>
+    <Color x:Key="BlackBackground">#000000</Color>
+    <Color x:Key="BackButton">#007DD6</Color>
+
+    <ResourceDictionary.MergedDictionaries>
+        <general:General />
+    </ResourceDictionary.MergedDictionaries>
+
+</ResourceDictionary>     
