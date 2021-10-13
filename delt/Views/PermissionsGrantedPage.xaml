@@ -8,8 +8,6 @@
     <StackLayout>
 
         <Label
-            Grid.Row="0"
-            Grid.Column="0"
             HorizontalOptions="CenterAndExpand"
             HorizontalTextAlignment="Center"
             Style="{StaticResource title1}"
@@ -18,20 +16,19 @@
         <Grid
             ColumnDefinitions="*"
             ColumnSpacing="0"
-            RowDefinitions="44,Auto,Auto,Auto,Auto"
+            RowDefinitions="Auto,Auto,Auto,Auto"
             VerticalOptions="CenterAndExpand">
 
             <VapoliaSVG:SvgImage
-                Grid.Row="1"
+                Grid.Row="0"
                 Grid.Column="0"
                 HeightRequest="41"
                 HorizontalOptions="CenterAndExpand"
                 Svg="ExclamationMark.svg"
                 WidthRequest="39" />
 
-
             <Label
-                Grid.Row="2"
+                Grid.Row="1"
                 Grid.Column="0"
                 Margin="25,0"
                 HorizontalOptions="CenterAndExpand"
@@ -42,7 +39,7 @@
                 VerticalTextAlignment="Center" />
 
             <Label
-                Grid.Row="3"
+                Grid.Row="2"
                 Grid.Column="0"
                 Margin="25,0"
                 HorizontalOptions="CenterAndExpand"
@@ -52,7 +49,7 @@
                 TextColor="{StaticResource SecondaryLabel}" />
 
             <Button
-                Grid.Row="4"
+                Grid.Row="3"
                 Grid.Column="0"
                 Margin="24,36,24,0"
                 HorizontalOptions="FillAndExpand"
