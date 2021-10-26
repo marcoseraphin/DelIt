@@ -16,6 +16,7 @@
     <None Remove="Xamarin.CommunityToolkit" />
     <None Remove="Vapolia.Xamarin.Svg.Forms" />
     <None Remove="SVGResources\" />
+    <None Remove="SVGResources\ExclamationMarkBlue.svg" />
     <None Remove="SVGResources\ExclamationMark.svg" />
   </ItemGroup>
   <ItemGroup>
@@ -24,5 +25,6 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="SVGResources\ExclamationMark.svg" />
+    <EmbeddedResource Include="SVGResources\ExclamationMarkBlue.svg" />
   </ItemGroup>
 </Project>

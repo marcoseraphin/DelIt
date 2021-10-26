@@ -1,74 +1,62 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <ContentPage
-    x:Class="delt.Views.PermissionsGrantedSelf"
+    x:Class="delt.Views.PermissionsGrantedSelfPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:VapoliaSVG="clr-namespace:XamSvg.XamForms;assembly=XamSvg.XamForms">
 
-    <Grid
-        ColumnDefinitions="*"
-        RowDefinitions="44,*"
-        ColumnSpacing="0"
-        VerticalOptions="StartAndExpand">
+    <StackLayout>
 
         <Label
-            Grid.Row="0"
-            Grid.Column="0"
             HorizontalOptions="CenterAndExpand"
             HorizontalTextAlignment="Center"
-            VerticalTextAlignment="Center"
             Style="{StaticResource title1}"
             Text="Erteilte Berechtigungen" />
 
-        <Path
-            Margin="0,0,0,100"
-            Grid.Row="2"
-            Grid.Column="0"
-            WidthRequest="48"
-            HeightRequest="46"
-            HorizontalOptions="Center"
-            VerticalOptions="Center"
-            Stroke="#2D9CDB"
-            Fill="#2D9CDB"
-            Aspect="None"
-            Data="M24 0C10.7451 0 0 10.7451 0 24C0 37.2547 10.7451 47.9999 24 47.9999C37.2547 47.9999 47.9999 37.2547 47.9999 24C47.9858 10.7511 37.2489 0.0141629 24 0ZM24 44.5714C12.6387 44.5714 3.42854 35.3612 3.42854 24C3.42854 12.6387 12.6387 3.42854 24 3.42854C35.3612 3.42854 44.5714 12.6387 44.5714 24C44.5591 35.3562 35.3562 44.5591 24 44.5714Z" />
+        <Grid
+            ColumnDefinitions="*"
+            ColumnSpacing="0"
+            RowDefinitions="Auto,Auto,Auto,Auto"
+            VerticalOptions="CenterAndExpand">
 
-        <Path
-            Margin="0,0,0,100"
-            Grid.Row="2"
-            Grid.Column="0"
-            WidthRequest="23"
-            HeightRequest="23"
-            HorizontalOptions="Center"
-            VerticalOptions="Center"
-            Stroke="#2D9CDB"
-            StrokeThickness="3"
-            StrokeLineCap="Round"
-            Aspect="None"
-            Data="M1.50049 13.9341L1.50049 1.49951" />
+            <VapoliaSVG:SvgImage
+                Grid.Row="0"
+                Grid.Column="0"
+                HeightRequest="41"
+                HorizontalOptions="CenterAndExpand"
+                Svg="ExclamationMarkBlue.svg"
+                WidthRequest="39" />
 
-        <Label
-            Grid.Row="2"
-            Grid.Column="0"
-            Style="{StaticResource bodySmall}"
-            Text="Berechtigungslinks können nicht durch Ihren eigenen Longines Equestrian Account aktiviert werden.&#10; &#10;Der Link muss von der Person geöffnet werdnen, die Berechtigungen erteilen oder erhalten soll."
-            HorizontalOptions="Start"
-            VerticalOptions="Center"
-            HorizontalTextAlignment="Center"
-            VerticalTextAlignment="Center"
-            Margin="25,0"
-            TextColor="{DynamicResource Label}" />
+            <Label
+                Grid.Row="1"
+                Grid.Column="0"
+                Margin="25,0"
+                HorizontalOptions="CenterAndExpand"
+                HorizontalTextAlignment="Center"
+                Style="{StaticResource headline}"
+                Text="Berechtigungslinks können nicht durch Ihren eigenen Longines Equestrian Account aktiviert werden."
+                TextColor="{DynamicResource Label}" />
 
-        <Button
-            Grid.Row="3"
-            Grid.Column="0"
-            HorizontalOptions="FillAndExpand"
-            VerticalOptions="Start"
-            Margin="24,0"
-            BackgroundColor="{DynamicResource BlackBackground}"
-            Text="Link und Anleitung teilen"
-            TextColor="{DynamicResource LightText}" />
+            <Label
+                Grid.Row="2"
+                Grid.Column="0"
+                Margin="25,0"
+                HorizontalOptions="CenterAndExpand"
+                HorizontalTextAlignment="Center"
+                Style="{StaticResource body}"
+                Text="Der Link muss von der Person geöffnet werdnen, die Berechtigungen erteilen oder erhalten soll."
+                TextColor="{StaticResource SecondaryLabel}" />
 
-    </Grid>
+            <Button
+                Grid.Row="3"
+                Grid.Column="0"
+                Margin="24,36,24,0"
+                HorizontalOptions="FillAndExpand"
+                Style="{DynamicResource buttonStyle}"
+                Text="Link und Anleitung teilen" />
+
+        </Grid>
+    </StackLayout>
 </ContentPage>
 
 <!--<TableView

@@ -46,7 +46,7 @@
             Icon="icon_feed.png" />
         <ShellContent
             Title="Permissions Self"
-            ContentTemplate="{DataTemplate local:PermissionsGrantedSelf}"
+            ContentTemplate="{DataTemplate local:PermissionsGrantedSelfPage}"
             Icon="icon_feed.png" />
     </TabBar>
 
