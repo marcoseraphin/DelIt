@@ -41,12 +41,20 @@
             ContentTemplate="{DataTemplate local:ItemsPage}"
             Icon="icon_feed.png" />-->
         <ShellContent
-            Title="Permissions Expired"
+            Title="Expired"
             ContentTemplate="{DataTemplate local:PermissionsGrantedPage}"
             Icon="icon_feed.png" />
         <ShellContent
-            Title="Permissions Self"
+            Title="Self"
             ContentTemplate="{DataTemplate local:PermissionsGrantedSelfPage}"
+            Icon="icon_feed.png" />
+         <ShellContent
+            Title="Granted"
+            ContentTemplate="{DataTemplate local:GrantedPermissionsStateInitialPage}"
+            Icon="icon_feed.png" />
+         <ShellContent
+            Title="Granted Other Users"
+            ContentTemplate="{DataTemplate local:GrantedPermissionsOtherUsersStateInitialPage}"
             Icon="icon_feed.png" />
     </TabBar>
 

@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="delt.Views.GrantedPermissionsStateInitialPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:VapoliaSVG="clr-namespace:XamSvg.XamForms;assembly=XamSvg.XamForms">
+
+    <StackLayout>
+
+        <Label
+            HorizontalOptions="CenterAndExpand"
+            HorizontalTextAlignment="Center"
+            Style="{StaticResource title1}"
+            Text="Andere User berechtigen" />
+
+        <Grid
+
+            ColumnDefinitions="*"
+            ColumnSpacing="0"
+            RowDefinitions="Auto,Auto,Auto,Auto"
+            VerticalOptions="CenterAndExpand">
+
+            <Label
+                Grid.Row="0"
+                Grid.Column="0"
+                Margin="25,0"
+                HorizontalOptions="CenterAndExpand"
+                HorizontalTextAlignment="Center"
+                Style="{StaticResource bodySmall}"
+                Text="Berechtigen Sie andere Personen mit einem Longines Equestrian Account dazu gewisse Aktionen (z.B.: Online melden) in Ihrem Namen durchzuführen."
+                TextColor="{DynamicResource Label}" />
+
+            <TableView
+                Grid.Row="1"
+                Grid.Column="0"
+                HasUnevenRows="true"
+                HeightRequest="200"
+                Intent="Settings"
+                VerticalOptions="Center">
+                <TableRoot>
+                    <TableSection TextColor="{DynamicResource SecondaryLabel}">
+                        <ViewCell>
+                            <Grid
+                            BackgroundColor="{DynamicResource SecondarySystemGroupedBackground}"
+                            ColumnDefinitions="*,Auto"
+                            RowDefinitions="*"
+                            RowSpacing="0"
+                            VerticalOptions="Start">
+                                <Label
+                                    Grid.Row="0"
+                                    Grid.Column="0"
+                                    Style="{StaticResource bodySmall}"
+                                    Text="Andere User berechtigen"
+                                    TextColor="{DynamicResource Label}"/>
+                                <Label
+                                    Grid.Row="1"
+                                    Grid.Column="0"
+                                    Style="{StaticResource footnote}"
+                                    Text="Andere führen Aktionen in Ihrem Namen aus"
+                                    TextColor="{DynamicResource Placeholder}"/>
+                                <VapoliaSVG:SvgImage
+                                    Grid.Row="0"
+                                    Grid.Column="1"
+                                    HeightRequest="20"
+                                    Svg="Arrow.svg"
+                                    WidthRequest="20 />
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding ChangeToGermanLanguageCommand}" />
+                                </Grid.GestureRecognizers>
+                            </Grid>
+                        </ViewCell>
+                        <ViewCell>
+                            <Grid
+                            BackgroundColor="{DynamicResource SecondarySystemGroupedBackground}"
+                            ColumnDefinitions="*,Auto"
+                            RowDefinitions="*"
+                            RowSpacing="0"
+                            VerticalOptions="Center">
+                                <Label
+                                    Grid.Row="0"
+                                    Grid.Column="0"
+                                    Style="{StaticResource bodySmall}"
+                                    Text="Meine Berechtigungen"
+                                    TextColor="{DynamicResource Label}"
+                                    />
+                                <Label
+                                    Grid.Row="1"
+                                    Grid.Column="0"
+                                    Style="{StaticResource footnote}"
+                                    Text="Sie führen Aktionen in einem anderen Namen aus"
+                                    TextColor="{DynamicResource Placeholder}"
+                                   />
+                                <VapoliaSVG:SvgImage
+                                    Grid.Row="0"
+                                    Grid.Column="1"
+                                    HeightRequest="20"
+                                    Svg="Arrow.svg"
+                                    WidthRequest="20" />
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding ChangeToGermanLanguageCommand}" />
+                                </Grid.GestureRecognizers>
+                            </Grid>
+                        </ViewCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+
+
+                <Button
+                Grid.Row="2"
+                Grid.Column="0"
+                Margin="24"
+                VerticalOptions="EndAndExpand"
+                HorizontalOptions="CenterAndExpand"
+                Style="{DynamicResource buttonStyle}"
+                Text="􀎻 Berechtigungs-QR-Code scannen"
+                    />
+
+        </Grid>
+    </StackLayout>
+
+</ContentPage>
+
+<!--<TableView
+            Grid.Row="1"
+            Grid.Column="0"
+            BackgroundColor="{DynamicResource SystemGroupedBackground}"
+            HasUnevenRows="true"
+            Intent="Settings"
+            VerticalOptions="StartAndExpand">
+            <TableRoot>
+                <TableSection TextColor="{DynamicResource SecondaryLabel}">
+                    <ViewCell>
+                        <Grid
+                            BackgroundColor="{DynamicResource SecondarySystemGroupedBackground}"
+                            ColumnDefinitions="*,Auto"
+                            RowDefinitions="*"
+                            RowSpacing="0"
+                            VerticalOptions="Center">
+                            <Label
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                Padding="20,11,0,9"
+                                FontSize="17"
+                                Text="{Binding LocalizedResources[LABEL_LANGUAGE_GERMAN]}"
+                                TextColor="{DynamicResource Label}"
+                                VerticalOptions="CenterAndExpand" />
+                            <Image
+                                Grid.Row="0"
+                                Grid.Column="1"
+                                Margin="0,0,24,0"
+                                HorizontalOptions="EndAndExpand"
+                                IsVisible="{Binding GermanLanguage}"
+                                VerticalOptions="CenterAndExpand">
+                                <Image.Source>
+                                    <VapoliaSVG:SvgImageSource
+                                        Width="37"
+                                        Height="42"
+                                        Source="Hook.svg" />
+                                </Image.Source>
+                            </Image>
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ChangeToGermanLanguageCommand}" />
+                            </Grid.GestureRecognizers>
+                        </Grid>
+                    </ViewCell>
+                    <ViewCell>
+                        <Grid
+                            BackgroundColor="{DynamicResource SecondarySystemGroupedBackground}"
+                            ColumnDefinitions="*,Auto"
+                            RowDefinitions="*"
+                            RowSpacing="0"
+                            VerticalOptions="Center">
+                            <Label
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                Padding="20,11,0,9"
+                                FontSize="17"
+                                Text="{Binding LocalizedResources[LABEL_LANGUAGE_ENGLISH]}"
+                                TextColor="{DynamicResource Label}"
+                                VerticalOptions="CenterAndExpand" />
+                            <Image
+                                Grid.Row="0"
+                                Grid.Column="1"
+                                Margin="0,0,24,0"
+                                HorizontalOptions="EndAndExpand"
+                                IsVisible="{Binding EnglishLanguage}"
+                                VerticalOptions="CenterAndExpand">
+                                <Image.Source>
+                                    <VapoliaSVG:SvgImageSource
+                                        Width="37"
+                                        Height="42"
+                                        Source="Hook.svg" />
+                                </Image.Source>
+                            </Image>
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ChangeToEnglishLanguageCommand}" />
+                            </Grid.GestureRecognizers>
+                        </Grid>
+                    </ViewCell>
+                    <ViewCell>
+                        <Grid
+                            BackgroundColor="{DynamicResource SecondarySystemGroupedBackground}"
+                            ColumnDefinitions="*,Auto"
+                            RowDefinitions="*"
+                            RowSpacing="0"
+                            VerticalOptions="Center">
+                            <Label
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                Padding="20,11,0,9"
+                                FontSize="17"
+                                Text="{Binding LocalizedResources[LABEL_LANGUAGE_AUTOMATIC]}"
+                                TextColor="{DynamicResource Label}"
+                                VerticalOptions="CenterAndExpand" />
+                            <Image
+                                Grid.Row="0"
+                                Grid.Column="1"
+                                Margin="0,0,24,0"
+                                HorizontalOptions="EndAndExpand"
+                                IsVisible="{Binding AutomaticLanguage}"
+                                VerticalOptions="CenterAndExpand">
+                                <Image.Source>
+                                    <VapoliaSVG:SvgImageSource
+                                        Width="37"
+                                        Height="42"
+                                        Source="Hook.svg" />
+                                </Image.Source>
+                            </Image>
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ChangeToAutomaticLanguageCommand}" />
+                            </Grid.GestureRecognizers>
+                        </Grid>
+                    </ViewCell>
+                </TableSection>
+            </TableRoot>
+        </TableView>-->
