@@ -63,7 +63,7 @@
                                     Grid.Column="1"
                                     HeightRequest="20"
                                     Svg="Arrow.svg"
-                                    WidthRequest="20 />
+                                    WidthRequest="20" />
                                 <Grid.GestureRecognizers>
                                     <TapGestureRecognizer Command="{Binding ChangeToGermanLanguageCommand}" />
                                 </Grid.GestureRecognizers>
