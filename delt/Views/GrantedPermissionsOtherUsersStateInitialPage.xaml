@@ -2,69 +2,59 @@
 <ContentPage
     x:Class="delt.Views.GrantedPermissionsOtherUsersStateInitialPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:VapoliaSVG="clr-namespace:XamSvg.XamForms;assembly=XamSvg.XamForms">
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
     <StackLayout>
 
         <Label
-            HorizontalOptions="CenterAndExpand"
-            HorizontalTextAlignment="Center"
+            Margin="24,10,24,0"
+            HorizontalOptions="StartAndExpand"
+            HorizontalTextAlignment="Start"
             Style="{StaticResource title1}"
             Text="Andere User berechtigen" />
 
         <Grid
-
             ColumnDefinitions="*"
             ColumnSpacing="0"
-            RowDefinitions="Auto,Auto,Auto,Auto"
+            RowDefinitions="Auto,Auto,Auto"
             VerticalOptions="CenterAndExpand">
 
             <Label
                 Grid.Row="0"
                 Grid.Column="0"
-                Margin="25,0"
-                HorizontalOptions="CenterAndExpand"
-                HorizontalTextAlignment="Center"
+                Margin="24,36,24,0"
+                HorizontalOptions="StartAndExpand"
+                HorizontalTextAlignment="Start"
                 Style="{StaticResource bodySmall}"
                 Text="Berechtigen Sie andere Personen mit einem Longines Equestrian Account dazu gewisse Aktionen (z.B.: Online melden) in Ihrem Namen durchzuführen."
                 TextColor="{DynamicResource Label}" />
 
-             <Label
-                Grid.Row="1"
-                Grid.Column="0"
-                Margin="24,40,24,24"
-                HorizontalOptions="CenterAndExpand"
-                HorizontalTextAlignment="Center"
-                Style="{StaticResource bodySmall}"
-                Text="DERZEIT BERECHTIGTE USER"
-                TextColor="{DynamicResource Placeholder}" />
 
             <TableView
-            Grid.Row="2"
-            Grid.Column="0"
-            BackgroundColor="{DynamicResource SystemGroupedBackground}"
-            HasUnevenRows="true"
-            
-            Intent="Settings"
-            VerticalOptions="Center">
+                Grid.Row="1"
+                Grid.Column="0"
+                Margin="0,36,0,0"
+                BackgroundColor="{DynamicResource SecondarySystemGroupedBackground}"
+                HasUnevenRows="true"
+                Intent="Settings"
+                VerticalOptions="Center">
                 <TableRoot>
-                    <TableSection TextColor="{DynamicResource SecondaryLabel}">
+                    <TableSection Title="DERZEIT BERECHTIGTE USER" TextColor="{DynamicResource SecondaryLabel}">
                         <ViewCell>
                             <Grid
-                            BackgroundColor="{DynamicResource SecondarySystemGroupedBackground}"
-                            ColumnDefinitions="*,Auto"
-                            RowDefinitions="*"
-                            RowSpacing="0"
-                            VerticalOptions="Center">
+                                BackgroundColor="{DynamicResource SecondarySystemGroupedBackground}"
+                                ColumnDefinitions="*,Auto"
+                                RowDefinitions="*"
+                                RowSpacing="0"
+                                VerticalOptions="Center">
                                 <Label
-                                Grid.Row="0"
-                                Grid.Column="0"
-                                Padding="20,11,0,9"
-                                    Style="{StaticResource bodySmall}"
-                                Text="Bisher keine erteilten Berechtigungen"
-                                TextColor="{DynamicResource Label}"
-                                VerticalOptions="CenterAndExpand"/>
+                                    Grid.Row="0"
+                                    Grid.Column="0"
+                                    Padding="20,11,0,9"
+                                    Style="{StaticResource body}"
+                                    Text="Bisher keine erteilten Berechtigungen"
+                                    TextColor="{DynamicResource SecondaryLabel}"
+                                    VerticalOptions="CenterAndExpand" />
                                 <Grid.GestureRecognizers>
                                     <TapGestureRecognizer Command="{Binding ChangeToGermanLanguageCommand}" />
                                 </Grid.GestureRecognizers>
@@ -72,19 +62,19 @@
                         </ViewCell>
                         <ViewCell>
                             <Grid
-                            BackgroundColor="{DynamicResource SecondarySystemGroupedBackground}"
-                            ColumnDefinitions="*,Auto"
-                            RowDefinitions="*"
-                            RowSpacing="0"
-                            VerticalOptions="Center">
+                                BackgroundColor="{DynamicResource SecondarySystemGroupedBackground}"
+                                ColumnDefinitions="*,Auto"
+                                RowDefinitions="*"
+                                RowSpacing="0"
+                                VerticalOptions="Center">
                                 <Label
-                                Grid.Row="0"
-                                Grid.Column="0"
-                                Padding="20,11,0,9"
-                                Style="{StaticResource bodySmall}"
-                                Text="Neue Berechtigung erteilen"
-                                TextColor="{DynamicResource Link}"
-                                VerticalOptions="CenterAndExpand" />
+                                    Grid.Row="0"
+                                    Grid.Column="0"
+                                    Padding="20,11,0,9"
+                                    Style="{StaticResource body}"
+                                    Text="Neue Berechtigung erteilen"
+                                    TextColor="{DynamicResource Link}"
+                                    VerticalOptions="CenterAndExpand" />
                                 <Grid.GestureRecognizers>
                                     <TapGestureRecognizer Command="{Binding ChangeToEnglishLanguageCommand}" />
                                 </Grid.GestureRecognizers>
@@ -97,117 +87,3 @@
     </StackLayout>
 </ContentPage>
 
-<!--<TableView
-            Grid.Row="1"
-            Grid.Column="0"
-            BackgroundColor="{DynamicResource SystemGroupedBackground}"
-            HasUnevenRows="true"
-            Intent="Settings"
-            VerticalOptions="StartAndExpand">
-            <TableRoot>
-                <TableSection TextColor="{DynamicResource SecondaryLabel}">
-                    <ViewCell>
-                        <Grid
-                            BackgroundColor="{DynamicResource SecondarySystemGroupedBackground}"
-                            ColumnDefinitions="*,Auto"
-                            RowDefinitions="*"
-                            RowSpacing="0"
-                            VerticalOptions="Center">
-                            <Label
-                                Grid.Row="0"
-                                Grid.Column="0"
-                                Padding="20,11,0,9"
-                                FontSize="17"
-                                Text="{Binding LocalizedResources[LABEL_LANGUAGE_GERMAN]}"
-                                TextColor="{DynamicResource Label}"
-                                VerticalOptions="CenterAndExpand" />
-                            <Image
-                                Grid.Row="0"
-                                Grid.Column="1"
-                                Margin="0,0,24,0"
-                                HorizontalOptions="EndAndExpand"
-                                IsVisible="{Binding GermanLanguage}"
-                                VerticalOptions="CenterAndExpand">
-                                <Image.Source>
-                                    <VapoliaSVG:SvgImageSource
-                                        Width="37"
-                                        Height="42"
-                                        Source="Hook.svg" />
-                                </Image.Source>
-                            </Image>
-                            <Grid.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding ChangeToGermanLanguageCommand}" />
-                            </Grid.GestureRecognizers>
-                        </Grid>
-                    </ViewCell>
-                    <ViewCell>
-                        <Grid
-                            BackgroundColor="{DynamicResource SecondarySystemGroupedBackground}"
-                            ColumnDefinitions="*,Auto"
-                            RowDefinitions="*"
-                            RowSpacing="0"
-                            VerticalOptions="Center">
-                            <Label
-                                Grid.Row="0"
-                                Grid.Column="0"
-                                Padding="20,11,0,9"
-                                FontSize="17"
-                                Text="{Binding LocalizedResources[LABEL_LANGUAGE_ENGLISH]}"
-                                TextColor="{DynamicResource Label}"
-                                VerticalOptions="CenterAndExpand" />
-                            <Image
-                                Grid.Row="0"
-                                Grid.Column="1"
-                                Margin="0,0,24,0"
-                                HorizontalOptions="EndAndExpand"
-                                IsVisible="{Binding EnglishLanguage}"
-                                VerticalOptions="CenterAndExpand">
-                                <Image.Source>
-                                    <VapoliaSVG:SvgImageSource
-                                        Width="37"
-                                        Height="42"
-                                        Source="Hook.svg" />
-                                </Image.Source>
-                            </Image>
-                            <Grid.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding ChangeToEnglishLanguageCommand}" />
-                            </Grid.GestureRecognizers>
-                        </Grid>
-                    </ViewCell>
-                    <ViewCell>
-                        <Grid
-                            BackgroundColor="{DynamicResource SecondarySystemGroupedBackground}"
-                            ColumnDefinitions="*,Auto"
-                            RowDefinitions="*"
-                            RowSpacing="0"
-                            VerticalOptions="Center">
-                            <Label
-                                Grid.Row="0"
-                                Grid.Column="0"
-                                Padding="20,11,0,9"
-                                FontSize="17"
-                                Text="{Binding LocalizedResources[LABEL_LANGUAGE_AUTOMATIC]}"
-                                TextColor="{DynamicResource Label}"
-                                VerticalOptions="CenterAndExpand" />
-                            <Image
-                                Grid.Row="0"
-                                Grid.Column="1"
-                                Margin="0,0,24,0"
-                                HorizontalOptions="EndAndExpand"
-                                IsVisible="{Binding AutomaticLanguage}"
-                                VerticalOptions="CenterAndExpand">
-                                <Image.Source>
-                                    <VapoliaSVG:SvgImageSource
-                                        Width="37"
-                                        Height="42"
-                                        Source="Hook.svg" />
-                                </Image.Source>
-                            </Image>
-                            <Grid.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding ChangeToAutomaticLanguageCommand}" />
-                            </Grid.GestureRecognizers>
-                        </Grid>
-                    </ViewCell>
-                </TableSection>
-            </TableRoot>
-        </TableView>-->

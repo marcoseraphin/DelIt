@@ -7,16 +7,18 @@
 
     <StackLayout>
 
+
         <Label
-            HorizontalOptions="CenterAndExpand"
+            Margin="24,0,24,0"
+            HorizontalOptions="StartAndExpand"
             HorizontalTextAlignment="Center"
-            Style="{StaticResource title1}"
+            Style="{StaticResource largeTitle}"
             Text="Erteilte Berechtigungen" />
 
         <Grid
             ColumnDefinitions="*"
             ColumnSpacing="0"
-            RowDefinitions="Auto,Auto,Auto,Auto"
+            RowDefinitions="Auto,Auto,Auto,Auto,Auto"
             VerticalOptions="CenterAndExpand">
 
             <VapoliaSVG:SvgImage
@@ -24,18 +26,19 @@
                 Grid.Column="0"
                 HeightRequest="41"
                 HorizontalOptions="CenterAndExpand"
-                Svg="ExclamationMarkBlue.svg"
+                Svg="RoundInfoIcon.svg"
                 WidthRequest="39" />
 
             <Label
                 Grid.Row="1"
                 Grid.Column="0"
-                Margin="25,0"
+                Margin="24,20,24,0"
                 HorizontalOptions="CenterAndExpand"
-                HorizontalTextAlignment="Center"
                 Style="{StaticResource headline}"
-                Text="Berechtigungslinks können nicht durch Ihren eigenen Longines Equestrian Account aktiviert werden."
-                TextColor="{DynamicResource Label}" />
+                Text="Dieser Link ist nicht mehr gültig"
+                TextColor="{DynamicResource Label}"
+                VerticalOptions="Center"
+                VerticalTextAlignment="Center" />
 
             <Label
                 Grid.Row="2"
@@ -44,11 +47,21 @@
                 HorizontalOptions="CenterAndExpand"
                 HorizontalTextAlignment="Center"
                 Style="{StaticResource body}"
+                Text="Berechtigungslinks können nicht durch Ihren eigenen Longines Equestrian Account aktiviert werden."
+                TextColor="{StaticResource SecondaryLabel}" />
+
+            <Label
+                Grid.Row="3"
+                Grid.Column="0"
+                Margin="24,20,24,0"
+                HorizontalOptions="CenterAndExpand"
+                HorizontalTextAlignment="Center"
+                Style="{StaticResource body}"
                 Text="Der Link muss von der Person geöffnet werdnen, die Berechtigungen erteilen oder erhalten soll."
                 TextColor="{StaticResource SecondaryLabel}" />
 
             <Button
-                Grid.Row="3"
+                Grid.Row="4"
                 Grid.Column="0"
                 Margin="24,36,24,0"
                 HorizontalOptions="FillAndExpand"

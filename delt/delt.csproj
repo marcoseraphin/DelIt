@@ -19,6 +19,8 @@
     <None Remove="SVGResources\ExclamationMarkBlue.svg" />
     <None Remove="SVGResources\ExclamationMark.svg" />
         <None Remove="SVGResources\Arrow.svg" />
+        <None Remove="SVGResources\ArrowRight.svg" />
+        <None Remove="SVGResources\RoundInfoIcon.svg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Themes\" />
@@ -28,6 +30,8 @@
     <EmbeddedResource Include="SVGResources\ExclamationMark.svg" />
     <EmbeddedResource Include="SVGResources\ExclamationMarkBlue.svg" />
         <EmbeddedResource Include="SVGResources\Arrow.svg" />
+        <EmbeddedResource Include="SVGResources\ArrowRight.svg" />
+        <EmbeddedResource Include="SVGResources\RoundInfoIcon.svg" />
   </ItemGroup>
   <ItemGroup>
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Views\PermissionsGrantedPage %28Kopie%29.xaml.cs">

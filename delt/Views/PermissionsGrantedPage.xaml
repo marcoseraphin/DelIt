@@ -8,9 +8,10 @@
     <StackLayout>
 
         <Label
-            HorizontalOptions="CenterAndExpand"
+            Margin="24,0,24,0"
+            HorizontalOptions="StartAndExpand"
             HorizontalTextAlignment="Center"
-            Style="{StaticResource title1}"
+            Style="{StaticResource largeTitle}"
             Text="Erteilte Berechtigungen" />
 
         <Grid

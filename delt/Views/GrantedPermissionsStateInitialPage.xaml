@@ -8,31 +8,33 @@
     <StackLayout>
 
         <Label
-            HorizontalOptions="CenterAndExpand"
+            Margin="24,10,24,0"
+            HorizontalOptions="StartAndExpand"
             HorizontalTextAlignment="Center"
             Style="{StaticResource title1}"
-            Text="Andere User berechtigen" />
+            Text="Erteilte Berechtigungen" />
 
         <Grid
-
             ColumnDefinitions="*"
             ColumnSpacing="0"
-            RowDefinitions="Auto,Auto,Auto,Auto"
-            VerticalOptions="CenterAndExpand">
+            RowDefinitions="Auto,Auto"
+            VerticalOptions="StartAndExpand">
 
             <Label
                 Grid.Row="0"
                 Grid.Column="0"
-                Margin="25,0"
-                HorizontalOptions="CenterAndExpand"
-                HorizontalTextAlignment="Center"
+                Margin="24,36,24,0"
+                HorizontalOptions="StartAndExpand"
+                HorizontalTextAlignment="Start"
                 Style="{StaticResource bodySmall}"
-                Text="Berechtigen Sie andere Personen mit einem Longines Equestrian Account dazu gewisse Aktionen (z.B.: Online melden) in Ihrem Namen durchzuführen."
+                Text="Sie können andere Personen dazu berechtigen gewisse Aktionen in der App in Ihrem Namen durchzuführen bzw. können Sie sich dazu berichtigen lassen dies für andere zu tun."
                 TextColor="{DynamicResource Label}" />
 
             <TableView
                 Grid.Row="1"
                 Grid.Column="0"
+                Margin="0,36,0,0"
+                BackgroundColor="{DynamicResource SecondarySystemGroupedBackground}"
                 HasUnevenRows="true"
                 HeightRequest="200"
                 Intent="Settings"
@@ -41,28 +43,31 @@
                     <TableSection TextColor="{DynamicResource SecondaryLabel}">
                         <ViewCell>
                             <Grid
-                            BackgroundColor="{DynamicResource SecondarySystemGroupedBackground}"
-                            ColumnDefinitions="*,Auto"
-                            RowDefinitions="*"
-                            RowSpacing="0"
-                            VerticalOptions="Start">
+                                BackgroundColor="{DynamicResource SecondarySystemGroupedBackground}"
+                                ColumnDefinitions="*,Auto"
+                                RowDefinitions="*"
+                                RowSpacing="0"
+                                VerticalOptions="Start">
                                 <Label
                                     Grid.Row="0"
                                     Grid.Column="0"
-                                    Style="{StaticResource bodySmall}"
-                                    Text="Andere User berechtigen"
-                                    TextColor="{DynamicResource Label}"/>
+                                    Margin="16,3,0,0"
+                                    Style="{StaticResource body}"
+                                    Text="Andere User berechtigen" />
                                 <Label
                                     Grid.Row="1"
                                     Grid.Column="0"
-                                    Style="{StaticResource footnote}"
-                                    Text="Andere führen Aktionen in Ihrem Namen aus"
-                                    TextColor="{DynamicResource Placeholder}"/>
+                                    Margin="16,0,0,0"
+                                    Style="{StaticResource caption1}"
+                                    Text="Andere führen Aktionen in Ihrem Namen aus" />
                                 <VapoliaSVG:SvgImage
                                     Grid.Row="0"
+                                    Grid.RowSpan="2"
                                     Grid.Column="1"
+                                    Margin="0,0,10,0"
                                     HeightRequest="20"
-                                    Svg="Arrow.svg"
+                                    Svg="ArrowRight.svg"
+                                    VerticalOptions="CenterAndExpand"
                                     WidthRequest="20" />
                                 <Grid.GestureRecognizers>
                                     <TapGestureRecognizer Command="{Binding ChangeToGermanLanguageCommand}" />
@@ -71,30 +76,31 @@
                         </ViewCell>
                         <ViewCell>
                             <Grid
-                            BackgroundColor="{DynamicResource SecondarySystemGroupedBackground}"
-                            ColumnDefinitions="*,Auto"
-                            RowDefinitions="*"
-                            RowSpacing="0"
-                            VerticalOptions="Center">
+                                BackgroundColor="{DynamicResource SecondarySystemGroupedBackground}"
+                                ColumnDefinitions="*,Auto"
+                                RowDefinitions="*"
+                                RowSpacing="0"
+                                VerticalOptions="Center">
                                 <Label
                                     Grid.Row="0"
                                     Grid.Column="0"
-                                    Style="{StaticResource bodySmall}"
-                                    Text="Meine Berechtigungen"
-                                    TextColor="{DynamicResource Label}"
-                                    />
+                                    Margin="16,3,0,0"
+                                    Style="{StaticResource body}"
+                                    Text="Meine Berechtigungen" />
                                 <Label
                                     Grid.Row="1"
                                     Grid.Column="0"
-                                    Style="{StaticResource footnote}"
-                                    Text="Sie führen Aktionen in einem anderen Namen aus"
-                                    TextColor="{DynamicResource Placeholder}"
-                                   />
+                                    Margin="16,0,0,0"
+                                    Style="{StaticResource caption1}"
+                                    Text="Sie führen Aktionen in einem anderen Namen aus" />
                                 <VapoliaSVG:SvgImage
                                     Grid.Row="0"
+                                    Grid.RowSpan="2"
                                     Grid.Column="1"
+                                    Margin="0,0,10,0"
                                     HeightRequest="20"
-                                    Svg="Arrow.svg"
+                                    Svg="ArrowRight.svg"
+                                    VerticalOptions="CenterAndExpand"
                                     WidthRequest="20" />
                                 <Grid.GestureRecognizers>
                                     <TapGestureRecognizer Command="{Binding ChangeToGermanLanguageCommand}" />
@@ -105,18 +111,14 @@
                 </TableRoot>
             </TableView>
 
-
-                <Button
-                Grid.Row="2"
-                Grid.Column="0"
-                Margin="24"
-                VerticalOptions="EndAndExpand"
-                HorizontalOptions="CenterAndExpand"
-                Style="{DynamicResource buttonStyle}"
-                Text="􀎻 Berechtigungs-QR-Code scannen"
-                    />
-
         </Grid>
+
+        <Button
+            Margin="0,0,0,10"
+            HorizontalOptions="CenterAndExpand"
+            Style="{DynamicResource buttonStyle}"
+            Text="Berechtigungs-QR-Code scannen"
+            VerticalOptions="EndAndExpand" />
     </StackLayout>
 
 </ContentPage>
