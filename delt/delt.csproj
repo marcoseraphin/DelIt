@@ -21,6 +21,7 @@
         <None Remove="SVGResources\Arrow.svg" />
         <None Remove="SVGResources\ArrowRight.svg" />
         <None Remove="SVGResources\RoundInfoIcon.svg" />
+        <None Remove="SVGResources\Arrow %28copy%29.svg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Themes\" />
@@ -32,10 +33,19 @@
         <EmbeddedResource Include="SVGResources\Arrow.svg" />
         <EmbeddedResource Include="SVGResources\ArrowRight.svg" />
         <EmbeddedResource Include="SVGResources\RoundInfoIcon.svg" />
+        <EmbeddedResource Include="SVGResources\Schey.svg" />
   </ItemGroup>
   <ItemGroup>
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Views\PermissionsGrantedPage %28Kopie%29.xaml.cs">
       <DependentUpon>PermissionsGrantedPage %28Kopie%29.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Views\GrantedPermissionsStateInitialPage %28copy%29.xaml.cs">
+      <DependentUpon>GrantedPermissionsStateInitialPage %28copy%29.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="ViewModels\AppShell.xaml.cs">
+      <DependentUpon>AppShell.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

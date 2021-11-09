@@ -45,10 +45,6 @@
             ContentTemplate="{DataTemplate local:PermissionsGrantedPage}"
             Icon="icon_feed.png" />>-->
          <ShellContent
-            Title="Granted"
-            ContentTemplate="{DataTemplate local:GrantedPermissionsStateInitialPage}"
-            Icon="icon_feed.png" />
-         <ShellContent
             Title="Granted Other Users"
             ContentTemplate="{DataTemplate local:GrantedPermissionsOtherUsersStateInitialPage}"
             Icon="icon_feed.png" /> 
@@ -59,6 +55,10 @@
            <ShellContent
             Title="Berechtigugszeitraum"
             ContentTemplate="{DataTemplate local:MyPage}"
+            Icon="icon_feed.png" />
+           <ShellContent
+            Title="Andere berechtigen"
+            ContentTemplate="{DataTemplate local:GrantPermissionStatePendingPage}"
             Icon="icon_feed.png" />
     </TabBar>
 
