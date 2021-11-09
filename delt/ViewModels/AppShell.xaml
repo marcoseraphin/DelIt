@@ -44,10 +44,6 @@
             Title="Expired"
             ContentTemplate="{DataTemplate local:PermissionsGrantedPage}"
             Icon="icon_feed.png" />>-->
-         <ShellContent
-            Title="Granted Other Users"
-            ContentTemplate="{DataTemplate local:GrantedPermissionsOtherUsersStateInitialPage}"
-            Icon="icon_feed.png" /> 
           <ShellContent
             Title="State initial"
             ContentTemplate="{DataTemplate local:GrantPermissionStateInitialPage}"
@@ -57,9 +53,13 @@
             ContentTemplate="{DataTemplate local:MyPage}"
             Icon="icon_feed.png" />
            <ShellContent
-            Title="Andere berechtigen"
+            Title="Berechtigen Pending"
             ContentTemplate="{DataTemplate local:GrantPermissionStatePendingPage}"
             Icon="icon_feed.png" />
+           <ShellContent
+            Title="Berechtigen Granted"
+            ContentTemplate="{DataTemplate local:GrantPermissionStateAcceptedPage}"
+            Icon="icon_feed.png" /> 
     </TabBar>
 
     <!--
