@@ -39,15 +39,11 @@
         <ShellContent
             Title="Browse"
             ContentTemplate="{DataTemplate local:ItemsPage}"
-            Icon="icon_feed.png" />-->
+            Icon="icon_feed.png" /
         <ShellContent
             Title="Expired"
             ContentTemplate="{DataTemplate local:PermissionsGrantedPage}"
-            Icon="icon_feed.png" />
-        <ShellContent
-            Title="Self"
-            ContentTemplate="{DataTemplate local:PermissionsGrantedSelfPage}"
-            Icon="icon_feed.png" />
+            Icon="icon_feed.png" />>-->
          <ShellContent
             Title="Granted"
             ContentTemplate="{DataTemplate local:GrantedPermissionsStateInitialPage}"
@@ -55,6 +51,14 @@
          <ShellContent
             Title="Granted Other Users"
             ContentTemplate="{DataTemplate local:GrantedPermissionsOtherUsersStateInitialPage}"
+            Icon="icon_feed.png" /> 
+          <ShellContent
+            Title="State initial"
+            ContentTemplate="{DataTemplate local:GrantPermissionStateInitialPage}"
+            Icon="icon_feed.png" />
+           <ShellContent
+            Title="Berechtigugszeitraum"
+            ContentTemplate="{DataTemplate local:MyPage}"
             Icon="icon_feed.png" />
     </TabBar>
 

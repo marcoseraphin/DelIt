@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="delt.Views.MyPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <StackLayout>
+
+        <Grid
+            ColumnDefinitions="*"
+            ColumnSpacing="0"
+            RowDefinitions="Auto,Auto,Auto"
+            VerticalOptions="StartAndExpand">
+
+            <TableView
+                Grid.Row="0"
+                Grid.Column="0"
+                BackgroundColor="{DynamicResource SecondarySystemGroupedBackground}"
+                HasUnevenRows="False"
+                HeightRequest="240"
+                Intent="Settings"
+                VerticalOptions="Start">
+                <TableRoot>
+                    <TableSection>
+                        <ViewCell>
+                            <Grid
+                                BackgroundColor="{DynamicResource SecondarySystemGroupedBackground}"
+                                ColumnDefinitions="*,Auto"
+                                RowDefinitions="*"
+                                RowSpacing="0"
+                                VerticalOptions="Center">
+                                <Label
+                                    Grid.Row="0"
+                                    Grid.Column="0"
+                                    Padding="20,11,0,9"
+                                    Style="{StaticResource body}"
+                                    Text="1 Woche"
+                                    VerticalOptions="CenterAndExpand" />
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding ChangeToGermanLanguageCommand}" />
+                                </Grid.GestureRecognizers>
+                            </Grid>
+                        </ViewCell>
+                        <ViewCell>
+                            <Grid
+                                BackgroundColor="{DynamicResource SecondarySystemGroupedBackground}"
+                                ColumnDefinitions="*,Auto"
+                                RowDefinitions="*"
+                                RowSpacing="0"
+                                VerticalOptions="Center">
+                                <Label
+                                    Grid.Row="0"
+                                    Grid.Column="0"
+                                    Padding="20,11,0,9"
+                                    Style="{StaticResource body}"
+                                    Text="2 Wochen"
+                                    VerticalOptions="CenterAndExpand" />
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding ChangeToEnglishLanguageCommand}" />
+                                </Grid.GestureRecognizers>
+                            </Grid>
+                        </ViewCell>
+                        <ViewCell>
+                            <Grid
+                                BackgroundColor="{DynamicResource SecondarySystemGroupedBackground}"
+                                ColumnDefinitions="*,Auto"
+                                RowDefinitions="*"
+                                RowSpacing="0"
+                                VerticalOptions="Center">
+                                <Label
+                                    Grid.Row="0"
+                                    Grid.Column="0"
+                                    Padding="20,11,0,9"
+                                    Style="{StaticResource body}"
+                                    Text="1 Jahr"
+                                    VerticalOptions="CenterAndExpand" />
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding ChangeToGermanLanguageCommand}" />
+                                </Grid.GestureRecognizers>
+                            </Grid>
+                        </ViewCell>
+                        <ViewCell>
+                            <Grid
+                                BackgroundColor="{DynamicResource SecondarySystemGroupedBackground}"
+                                ColumnDefinitions="*,Auto"
+                                RowDefinitions="*"
+                                RowSpacing="0"
+                                VerticalOptions="Center">
+                                <Label
+                                    Grid.Row="0"
+                                    Grid.Column="0"
+                                    Padding="20,11,0,9"
+                                    Style="{StaticResource body}"
+                                    Text="Für immer"
+                                    VerticalOptions="CenterAndExpand" />
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding ChangeToGermanLanguageCommand}" />
+                                </Grid.GestureRecognizers>
+                            </Grid>
+                        </ViewCell>
+                        <ViewCell>
+                            <Grid
+                                BackgroundColor="{DynamicResource SecondarySystemGroupedBackground}"
+                                ColumnDefinitions="*,Auto"
+                                RowDefinitions="*"
+                                RowSpacing="0"
+                                VerticalOptions="Center">
+                                <Label
+                                    Grid.Row="0"
+                                    Grid.Column="0"
+                                    Padding="20,11,0,9"
+                                    Style="{StaticResource body}"
+                                    Text="Benutzerdefiniertes Datum"
+                                    VerticalOptions="CenterAndExpand" />
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding ChangeToGermanLanguageCommand}" />
+                                </Grid.GestureRecognizers>
+                            </Grid>
+                        </ViewCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+
+            <Label
+                Grid.Row="1"
+                Grid.Column="0"
+                Margin="16,8,0,0"
+                HorizontalOptions="Start"
+                VerticalOptions="Start"
+                HorizontalTextAlignment="Start"
+                Text="Nur für Sie sichtbar. z.B. “Berechtigung für Trainerin”."
+                Style="{DynamicResource caption1}"
+                TextColor="{DynamicResource SecondaryLabel}" />
+
+        </Grid>
+
+    </StackLayout>
+</ContentPage>
+

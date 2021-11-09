@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="delt.Views.GrantPermissionStateInitialPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:VapoliaSVG="clr-namespace:XamSvg.XamForms;assembly=XamSvg.XamForms">
+
+    <StackLayout>
+
+        <!--BackgroundColor="{DynamicResource SecondarySystemGroupedBackground}"-->
+
+        <Grid
+            ColumnDefinitions="*"
+            ColumnSpacing="0"
+            RowSpacing="6"
+            RowDefinitions="Auto,Auto,140,130,185,Auto">
+
+        <Label
+            Grid.Row="0"
+            Margin="24,10,24,0"
+            HorizontalOptions="Start"
+            HorizontalTextAlignment="Center"
+            Style="{StaticResource title1}"
+            Text="Berechtigung erteilen" />
+
+
+        <Label
+             Grid.Row="1"
+             Grid.Column="0"
+             Margin="24,24,24,0"
+             HorizontalOptions="Start"
+             HorizontalTextAlignment="Start"
+             Style="{StaticResource bodySmall}"
+             Text="Konfigurieren Sie die Berechtigung und versenden dann einen Berechtigungslink an die zu berechtigende Person."
+             TextColor="{DynamicResource Label}" />
+
+
+        <Grid
+            Grid.Row="2"
+            ColumnDefinitions="*"
+            ColumnSpacing="0"
+            RowDefinitions="Auto,Auto"
+            RowSpacing="0">
+
+            <TableView
+                Grid.Row="0"
+                BackgroundColor="{DynamicResource SecondarySystemGroupedBackground}"
+                HasUnevenRows="True"
+                Intent="Settings">
+               
+                <TableRoot>
+                    <TableSection TextColor="{DynamicResource SecondaryLabel}">
+                        <ViewCell>
+                            <Grid
+                                BackgroundColor="{DynamicResource SecondarySystemGroupedBackground}"
+                                ColumnDefinitions="*,Auto"
+                                RowDefinitions="*"
+                                RowSpacing="0">
+                                <Label
+                                    Grid.Row="0"
+                                    Grid.Column="0"
+                                    Margin="16,11,9,0"
+                                    Style="{StaticResource body}"
+                                    Text="Titel" />
+                                <Label
+                                    Grid.Row="0"
+                                    Grid.Column="1"
+                                    Margin="0,13,37,13"
+                                    Style="{StaticResource body}"
+                                    TextColor="{DynamicResource SecondaryLabel}"
+                                    Text="Berechtigung vom dd.mm.yy hh:mm" />
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding ChangeToGermanLanguageCommand}" />
+                                </Grid.GestureRecognizers>
+                            </Grid>
+                        </ViewCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+
+            <Label
+                Grid.Row="1"
+                Margin="16,8,0,36"
+                HeightRequest="16"
+                HorizontalOptions="StartAndExpand"
+                HorizontalTextAlignment="Start"
+                Text="Nur für Sie sichtbar. z.B. “Berechtigung für Trainerin”."
+                Style="{DynamicResource caption1}"
+                TextColor="{DynamicResource SecondaryLabel}" />
+
+    </Grid>
+    <Grid
+            Grid.Row="3"
+            ColumnDefinitions="*"
+            ColumnSpacing="0"
+            RowDefinitions="Auto,Auto"
+            RowSpacing="0">
+
+
+             <Label
+                Grid.Row="0"
+                Margin="16,8,0,0"
+                HeightRequest="16"
+                HorizontalOptions="StartAndExpand"
+                VerticalOptions="StartAndExpand"
+                HorizontalTextAlignment="Start"
+                Text="ART DER BERECHTIGUNG"
+                Style="{DynamicResource footnoteCapitalized}"
+                TextColor="{DynamicResource SecondaryLabel}" />
+
+             <TableView
+                Grid.Row="1"
+                BackgroundColor="{DynamicResource SecondarySystemGroupedBackground}"
+                HasUnevenRows="true"
+                Intent="Settings">
+                <TableRoot>
+                    <TableSection TextColor="{DynamicResource SecondaryLabel}">
+                        <SwitchCell  Text="Online melden"/>
+                        <SwitchCell  Text="Stallbedarf bestellen"/>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+        </Grid>
+        <Grid
+            Grid.Row="4"
+            ColumnDefinitions="*"
+            ColumnSpacing="0"
+            RowSpacing="0"
+            RowDefinitions="Auto,Auto,Auto"
+            VerticalOptions="Start">
+
+
+             <Label
+                Grid.Row="0"
+                Margin="16,36,0,8"
+                HeightRequest="16"
+                HorizontalOptions="StartAndExpand"
+                VerticalOptions="Start"
+                HorizontalTextAlignment="Start"
+                Text="ZEITRAUM DER BERECHTIGUNG"
+                Style="{DynamicResource footnoteCapitalized}"
+                TextColor="{DynamicResource SecondaryLabel}" />
+
+             <TableView
+                Grid.Row="1"
+                Grid.Column="0"
+                BackgroundColor="{DynamicResource SecondarySystemGroupedBackground}"
+                HasUnevenRows="True"
+                Intent="Settings">
+                <TableRoot>
+                    <TableSection TextColor="{DynamicResource SecondaryLabel}">
+                        <ViewCell>
+                            <Grid
+                                BackgroundColor="{DynamicResource SecondarySystemGroupedBackground}"
+                                ColumnDefinitions="*,Auto"
+                                RowDefinitions="*"
+                                RowSpacing="0"
+                                VerticalOptions="Center">
+                                <Label
+                                    Grid.Row="0"
+                                    Grid.Column="0"
+                                    Margin="16,11,9,0"
+                                    HorizontalOptions="StartAndExpand"
+                                    VerticalOptions="CenterAndExpand"
+                                    Style="{StaticResource body}"
+                                    Text="Berechtigungszeitraum" />
+                                <Grid
+                                    Grid.Column="2"
+                                    HorizontalOptions="End"
+                                    ColumnDefinitions="Auto,Auto"
+                                    RowDefinitions="*"
+                                    RowSpacing="0"
+                                    VerticalOptions="Start">
+                                    <Label
+                                        Grid.Column="0"
+                                        Margin="0,16,16,0"
+                                        Style="{StaticResource body}"
+                                        TextColor="{DynamicResource SecondaryLabel}"
+                                        Text="1 Woche"/>
+                                    <VapoliaSVG:SvgImage
+                                        Grid.Column="1"
+                                        Margin="0,26,16,0"
+                                        HorizontalOptions="End"
+                                        HeightRequest="20"
+                                        Svg="ArrowRight.svg"
+                                        VerticalOptions="Center"
+                                        WidthRequest="20" />
+                                   
+                                </Grid>
+                                    <Grid.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding ChangeToGermanLanguageCommand}" />
+                                    </Grid.GestureRecognizers>
+                            </Grid>
+                        </ViewCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+
+            <Label
+                Grid.Row="2"
+                Margin="16,8,0,0"
+                HeightRequest="16"
+                HorizontalOptions="Center"
+                VerticalOptions="Start"
+                HorizontalTextAlignment="Start"
+                Text="Die Berechtigung erlischt am Sonntag, den 03.09.2021 um 23:59 Uhr."
+                Style="{DynamicResource caption1}"
+                TextColor="{DynamicResource SecondaryLabel}" />
+                </Grid>
+
+
+
+        <Button
+            Grid.Row="5"
+            Margin="0,0,0,10"
+            HorizontalOptions="CenterAndExpand"
+            Style="{DynamicResource buttonStyle}"
+            Text="Berechtigungslink erstellen"
+            VerticalOptions="EndAndExpand" />
+
+                          </Grid>
+    </StackLayout>
+</ContentPage>
