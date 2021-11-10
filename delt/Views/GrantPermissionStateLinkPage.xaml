@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:VapoliaSVG="clr-namespace:XamSvg.XamForms;assembly=XamSvg.XamForms"
+    x:Class="delt.Views.GrantPermissionStateLinkPage">
+
+        <StackLayout>
+
+        <Label
+            Margin="24,10,24,0"
+            HorizontalOptions="StartAndExpand"
+            HorizontalTextAlignment="Center"
+            Style="{StaticResource title1}"
+            Text="Andere User berechtigen" />
+
+        <Grid
+            ColumnDefinitions="*"
+            ColumnSpacing="0"
+            RowDefinitions="Auto,Auto"
+            VerticalOptions="StartAndExpand">
+
+            <Label
+                Grid.Row="0"
+                Grid.Column="0"
+                Margin="24,36,24,0"
+                HorizontalOptions="StartAndExpand"
+                HorizontalTextAlignment="Start"
+                Style="{StaticResource bodySmall}"
+                Text="Teilen Sie den folgenden Link nur mit der Person, die Sie dazu berechtigen möchten in Ihrem Namen Aktionen in der App ausführen zu können.&#x0a;&#x0a;Sie werden in der App benachrichtigt, wenn eine Person die Berechtigung angenommen hat."
+                TextColor="{DynamicResource Label}" />
+
+            <Label
+                Grid.Row="1"
+                Grid.Column="0"
+                Margin="24,36,24,0"
+                HorizontalOptions="StartAndExpand"
+                HorizontalTextAlignment="Start"
+                Style="{StaticResource footnoteCapitalized}"
+                Text="BERECHTIGUNGSLINK"
+                TextColor="{DynamicResource SecondaryLabel}"/>
+
+        <TableView
+                Grid.Row="2"
+                Grid.Column="0"
+                Margin="0,0,0,0"
+                BackgroundColor="{DynamicResource SecondarySystemGroupedBackground}"
+                HasUnevenRows="True"
+                Intent="Settings"
+                VerticalOptions="Center">
+            <TableRoot>
+                <TableSection TextColor="{DynamicResource SecondaryLabel}">
+                    <ViewCell>
+                            <Grid
+                                Grid.Row="2"
+                                BackgroundColor="{DynamicResource SecondarySystemGroupedBackground}"
+                                ColumnDefinitions="*,Auto"
+                                RowDefinitions="*"
+                                RowSpacing="0"
+                                VerticalOptions="Start"
+                                HorizontalOptions="Center">
+                               <VapoliaSVG:SvgImage
+                                    Grid.Row="0"
+                                    Grid.Column="0"
+                                    Margin="0,0,10,0"
+                                    HeightRequest="20"
+                                    Svg="QRCode.svg"
+                                    VerticalOptions="CenterAndExpand"
+                                    WidthRequest="50" />
+                                <Label
+                                    Grid.Row="0"
+                                    Grid.Column="1"
+                                    Margin="16,3,0,0"
+                                    Style="{StaticResource footnote}"
+                                    Text="https://deeplink.com/granted-permissions/b0e47057-92c9-4f18-b260-8865698d6b87" />
+                                 <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding ChangeToGermanLanguageCommand}" />
+                                 </Grid.GestureRecognizers>
+                            </Grid>
+                        </ViewCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+
+
+             <Label
+                Grid.Row="3"
+                Grid.Column="0"
+                Margin="24,0,24,0"
+                HorizontalOptions="StartAndExpand"
+                HorizontalTextAlignment="Start"
+                Style="{StaticResource footnoteCapitalized}"
+                Text="Der Link ist nur einmal gültig und läuft nach 48h ab. Sie können erteilte Berechtigungen jederzeit einsehen und löschen."
+                TextColor="{DynamicResource SecondaryLabel}"/>
+
+        </Grid>
+
+        <Button
+            Margin="0,0,0,10"
+            HorizontalOptions="CenterAndExpand"
+            Style="{DynamicResource buttonStyle}"
+            Text="Link und Anleitung teilen"
+            VerticalOptions="EndAndExpand" />
+    </StackLayout>
+
+</ContentPage>

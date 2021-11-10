@@ -33,7 +33,8 @@
         <EmbeddedResource Include="SVGResources\Arrow.svg" />
         <EmbeddedResource Include="SVGResources\ArrowRight.svg" />
         <EmbeddedResource Include="SVGResources\RoundInfoIcon.svg" />
-        <EmbeddedResource Include="SVGResources\Schey.svg" />
+        <EmbeddedResource Include="SVGResources\CircledStick.svg" />
+        <EmbeddedResource Include="SVGResources\Arrow %28copy%29.svg" />
   </ItemGroup>
   <ItemGroup>
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Views\PermissionsGrantedPage %28Kopie%29.xaml.cs">
