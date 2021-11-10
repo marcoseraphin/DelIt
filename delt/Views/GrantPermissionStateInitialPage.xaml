@@ -5,6 +5,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:VapoliaSVG="clr-namespace:XamSvg.XamForms;assembly=XamSvg.XamForms">
 
+
     <ScrollView>
 
         <StackLayout VerticalOptions="FillAndExpand">
@@ -43,13 +44,13 @@
                                 <Label
                                     Grid.Row="0"
                                     Grid.Column="0"
-                                    Margin="16,11,9,0"
+                                    Margin="16,6,9,0"
                                     Style="{StaticResource body}"
                                     Text="Titel" />
                                 <Entry
                                     Grid.Row="0"
                                     Grid.Column="1"
-                                    Margin="0,13,17,13"
+                                    Margin="20,13,17,13"
                                     Placeholder="Berechtigung vom dd.mm.yy hh:mm"
                                     TextColor="{DynamicResource Label}" />
                                 <Grid.GestureRecognizers>
@@ -76,7 +77,7 @@
                 Grid.Row="4"
                 BackgroundColor="{DynamicResource SecondarySystemGroupedBackground}"
                 HasUnevenRows="true"
-                HeightRequest="150"
+                HeightRequest="180"
                 Intent="Settings"
                 VerticalOptions="StartAndExpand">
                 <TableRoot>
@@ -92,7 +93,7 @@
                 Grid.Column="0"
                 BackgroundColor="{DynamicResource SecondarySystemGroupedBackground}"
                 HasUnevenRows="True"
-                HeightRequest="120"
+                HeightRequest="150"
                 Intent="Settings">
                 <TableRoot>
                     <TableSection Title="ZEITRAUM DER BERECHTIGUNG" TextColor="{DynamicResource SecondaryLabel}">
@@ -164,4 +165,6 @@
 
         </StackLayout>
     </ScrollView>
+
+
 </ContentPage>
