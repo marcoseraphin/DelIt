@@ -44,19 +44,19 @@
             Title="Expired"
             ContentTemplate="{DataTemplate local:PermissionsGrantedPage}"
             Icon="icon_feed.png" />>-->
-           <ShellContent
+        <ShellContent
             Title="Berechtigugszeitraum"
-            ContentTemplate="{DataTemplate local:MyPage}"
+            ContentTemplate="{DataTemplate local:GrantPermissionStateInitialPage}"
             Icon="icon_feed.png" />
-           <ShellContent
+        <ShellContent
             Title="Berechtigen Pending"
             ContentTemplate="{DataTemplate local:GrantPermissionStatePendingPage}"
             Icon="icon_feed.png" />
-           <ShellContent
+        <ShellContent
             Title="Berechtigen Granted"
             ContentTemplate="{DataTemplate local:GrantPermissionStateAcceptedPage}"
             Icon="icon_feed.png" />
-           <ShellContent
+        <ShellContent
             Title="State Link"
             ContentTemplate="{DataTemplate local:GrantPermissionStateLinkPage}"
             Icon="icon_feed.png" />
