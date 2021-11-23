@@ -44,10 +44,7 @@
             Title="Expired"
             ContentTemplate="{DataTemplate local:PermissionsGrantedPage}"
             Icon="icon_feed.png" />>-->
-        <ShellContent
-            Title="State Link"
-            ContentTemplate="{DataTemplate local:GrantPermissionStateLinkPage}"
-            Icon="icon_feed.png" />
+
         <ShellContent
             Title="State Edit"
             ContentTemplate="{DataTemplate local:GrantPermissionStateEditPage}"
@@ -59,6 +56,10 @@
         <ShellContent
             Title="State Accepted"
             ContentTemplate="{DataTemplate local:GrantPermissionStateAcceptedTwoPage}"
+            Icon="icon_feed.png" />
+        <ShellContent
+            Title="State Link"
+            ContentTemplate="{DataTemplate local:GrantPermissionStateDeclinedPage}"
             Icon="icon_feed.png" />
     </TabBar>
 

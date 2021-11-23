@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:VapoliaSVG="clr-namespace:XamSvg.XamForms;assembly=XamSvg.XamForms"
+    x:Class="delt.Views.GrantPermissionStateDeclinedPage">
+    <StackLayout>
+
+        <Label
+            Margin="24,0,0,0"
+            HorizontalOptions="Start"
+            Style="{StaticResource largeTitle}"
+            Text="Anfrage abgelehnt" />
+
+        <Grid
+            ColumnDefinitions="*"
+            ColumnSpacing="0"
+            RowDefinitions="Auto,Auto,Auto,Auto"
+            VerticalOptions="CenterAndExpand">
+
+            <VapoliaSVG:SvgImage
+                Grid.Row="0"
+                Grid.Column="0"
+                HeightRequest="41"
+                HorizontalOptions="CenterAndExpand"
+                Svg="HeadCircleDeclined.svg"
+                WidthRequest="39" />
+
+            <Label
+                Grid.Row="1"
+                Grid.Column="0"
+                Margin="25,0"
+                HorizontalOptions="CenterAndExpand"
+                Style="{StaticResource headline}"
+                Text="Berechtigungsanfrage abgelehnt"
+                TextColor="{DynamicResource Label}"
+                VerticalOptions="Center"
+                VerticalTextAlignment="Center" />
+
+            <Label
+                Grid.Row="2"
+                Grid.Column="0"
+                Margin="25,0"
+                HorizontalOptions="CenterAndExpand"
+                HorizontalTextAlignment="Center"
+                Style="{StaticResource body}"
+                Text="Sollten Sie erteilte Berechtigungen brauchen, können Sie auch selbst eine Anfrage dafür stellen."
+                TextColor="{StaticResource SecondaryLabel}" />
+
+            <Button
+                Grid.Row="3"
+                Grid.Column="0"
+                Margin="24,36,24,20"
+                HorizontalOptions="FillAndExpand"
+                Style="{DynamicResource buttonStyle}"
+                Text="Berechtigungen anfragen"
+                WidthRequest="1000"/>
+
+        </Grid>
+    </StackLayout>
+</ContentPage>
