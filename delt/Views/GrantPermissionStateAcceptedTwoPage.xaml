@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="delt.Views.GrantPermissionStateAcceptedTwoPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:VapoliaSVG="clr-namespace:XamSvg.XamForms;assembly=XamSvg.XamForms">
+
+    <StackLayout>
+
+        <Label
+            Margin="24,0,0,0"
+            HorizontalOptions="Start"
+            Style="{StaticResource largeTitle}"
+            Text="Berechtigungen erhalten" />
+
+        <Grid
+            ColumnDefinitions="*"
+            ColumnSpacing="0"
+            RowDefinitions="Auto,Auto,Auto,Auto,Auto"
+            VerticalOptions="CenterAndExpand">
+
+            <VapoliaSVG:SvgImage
+                Grid.Row="0"
+                Grid.Column="0"
+                HeightRequest="41"
+                HorizontalOptions="CenterAndExpand"
+                Svg="HeadCircleCheck.svg"
+                WidthRequest="39" />
+
+            <Label
+                Grid.Row="1"
+                Grid.Column="0"
+                Margin="25,0"
+                HorizontalOptions="CenterAndExpand"
+                Style="{StaticResource headline}"
+                Text="Berechtigungen angenommen"
+                TextColor="{DynamicResource Label}"
+                VerticalOptions="Center"
+                VerticalTextAlignment="Center" />
+
+            <Label
+                Grid.Row="2"
+                Grid.Column="0"
+                Margin="25,0"
+                HorizontalOptions="CenterAndExpand"
+                HorizontalTextAlignment="Center"
+                Style="{StaticResource body}"
+                Text="Sie sind jetzt berechtigt bis dd.yy.mm hh:mm für Jeanne Sadran folgende Aktionen durchzuführen:"
+                TextColor="{StaticResource SecondaryLabel}" />
+
+            <Button
+                Grid.Row="3"
+                Grid.Column="0"
+                Margin="24,36,24,20"
+                HorizontalOptions="FillAndExpand"
+                Style="{DynamicResource buttonStyle}"
+                Text="Online melden"
+                WidthRequest="1000"/>
+
+            <Frame
+              Grid.Row="4"
+              Grid.Column="0"
+              Margin="24,0,24,0"
+              Padding="0"
+              BackgroundColor="{DynamicResource Link}"
+              Style="{DynamicResource primary-twolines-disabled}"
+              CornerRadius="5"
+              HeightRequest="58"
+              HasShadow="False"
+              IsEnabled="{Binding IsRegisterOnlineButtonEnabled}"
+              IsVisible="{Binding IsRegisterOnlineButtonVisible}"
+              Opacity="{Binding Opacity}"
+              WidthRequest="1000">
+              <Frame.GestureRecognizers>
+                  <TapGestureRecognizer Command="{Binding RegisterOnlineCommand}" />
+              </Frame.GestureRecognizers>
+              <StackLayout
+                  HorizontalOptions="FillAndExpand"
+                  Orientation="Vertical"
+                  VerticalOptions="FillAndExpand">
+                  <Label
+                      HorizontalTextAlignment="Center"
+                      Opacity="{Binding Opacity}"
+                      Style="{DynamicResource bodyMedium}"
+                      Text="Online melden"
+                      TextColor="{DynamicResource LightText}" />
+                  <Label
+                      FontSize="12"
+                      HorizontalTextAlignment="Center"
+                      Opacity="{Binding Opacity}"
+                      Text="derzeit nicht möglich"
+                      TextColor="{DynamicResource LightText}" />
+              </StackLayout>
+            </Frame>
+
+        </Grid>
+    </StackLayout>
+</ContentPage>
