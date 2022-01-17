@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:cv="clr-namespace:delt.ContentViews"
              x:Class="delt.Views.AboutPage"
              xmlns:vm="clr-namespace:delt.ViewModels"
              Title="{Binding Title}">
@@ -29,6 +30,16 @@
         </StackLayout>
         <ScrollView Grid.Row="1">
             <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
+
+                <cv:ShowItemCV
+                            Margin="20,0,20,16"
+                            ShowLogoUrl="ShowIcon.png"
+                            ShowCountry="de-DE"
+                            IconRight="ArrowRight.svg"
+                            ShowTitle="Sweden Horse Show"
+                            SubText="Göteborg 23.-25.Feb 22"
+                            Command="{Binding SelectShowCommand}"/>
+
                 <Label Text="Start developing now" FontSize="Title"/>
                 <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="0,0,0,0"/>
                 <Label FontSize="16" Padding="0,24,0,0">
@@ -41,10 +52,10 @@
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
-                <Button Margin="0,10,0,0" Text="Learn more"
+                <!--<Button Margin="0,10,0,0" Text="Learn more"
                         Command="{Binding OpenWebCommand}"
                         BackgroundColor="{StaticResource Primary}"
-                        TextColor="White" />
+                        TextColor="White" />-->
             </StackLayout>
         </ScrollView>
     </Grid>

@@ -31,12 +31,12 @@
     </Shell.Resources>-->
 
     <TabBar>
-        <!--<ShellContent
+        <ShellContent
             Title="About"
             ContentTemplate="{DataTemplate local:AboutPage}"
             Icon="icon_about.png"
             Route="AboutPage" />
-        <ShellContent
+        <!--<ShellContent
             Title="Browse"
             ContentTemplate="{DataTemplate local:ItemsPage}"
             Icon="icon_feed.png" /
