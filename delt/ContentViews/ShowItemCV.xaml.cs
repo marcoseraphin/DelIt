@@ -13,7 +13,7 @@ namespace delt.ContentViews
           typeof(ShowItemCV));
 
         public static readonly BindableProperty ShowClassificationProperty = BindableProperty.Create(
-          nameof(ShowClassfication),
+          nameof(ShowClassification),
           typeof(string),
           typeof(ShowItemCV));
 
@@ -62,7 +62,7 @@ namespace delt.ContentViews
             set => SetValue(ShowIDProperty, value);
         }
 
-        public String ShowClassfication
+        public String ShowClassification
         {
             get => (String)GetValue(ShowClassificationProperty);
             set => SetValue(ShowClassificationProperty, value);

@@ -4,119 +4,111 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:VapoliaSVG="clr-namespace:XamSvg.XamForms;assembly=XamSvg.XamForms"
     x:Class="delt.ContentViews.ShowItemCV">
-    <Frame
-        x:Name="InnerFrame"
-        Padding="0"
-        HasShadow="True"
-        BackgroundColor="{DynamicResource SystemBackground}"
-        CornerRadius="6"
-        HeightRequest="58"
-        HorizontalOptions="FillAndExpand"
-        IsVisible="{Binding IsRegisterOnlineButtonEnabled}">
-        <Grid HorizontalOptions="FillAndExpand" x:Name="InnerGrid">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="Auto" />
-            </Grid.ColumnDefinitions>
 
-            <Frame
-                Grid.Row="0"
-                Grid.RowSpan="2"
-                Grid.Column="0"
-                Margin="8,0,0,0"
-                Padding="0"
-                BackgroundColor="{DynamicResource SystemBackground}"
-                CornerRadius="15"
-                HasShadow="False"
-                HeightRequest="20"
-                WidthRequest="40">
-                <Image
-                    HeightRequest="40"
-                    Source="{Binding ShowLogoUrl}"
-                    VerticalOptions="CenterAndExpand"
-                    WidthRequest="60" />
-            </Frame>
 
-            <Label
-                Grid.Row="0"
-                Grid.Column="1"
-                LineBreakMode="MiddleTruncation"
-                Style="{DynamicResource bodySmallSemibold}"
-                Text="{Binding ShowTitle}">
-                <Label.Margin>
-                    <OnPlatform x:TypeArguments="Thickness">
-                        <On Platform="iOS" Value="12,6,0,0" />
-                        <On Platform="Android" Value="12,6,0,0" />
-                    </OnPlatform>
-                </Label.Margin>
-            </Label>
+	<Frame
+		x:Name="InnerFrame"
+    Padding="0"
+    HasShadow="False"
+    HorizontalOptions="FillAndExpand"
+		VerticalOptions="FillAndExpand"
+    IsVisible="{Binding IsRegisterOnlineButtonEnabled}">
 
-            <StackLayout
-                x:Name="InnerStackLayout"
-                Grid.Row="1"
-                Grid.Column="1"
-                Padding="0"
-                Orientation="Horizontal">
-                <Image>
-                    <Image.Source>
-                        <VapoliaSVG:SvgImageSource
-                            x:Name="InnerCountrySvgImage"
-                            Width="100"
-                            Height="60"
-                            Source="{Binding CountryImage}" />
-                    </Image.Source>
-                </Image>
-                <StackLayout Padding="0" Orientation="Vertical">
-                    <Label
-                        Style="{DynamicResource caption1}"
-                        Text="{Binding SubText}"
-                        TextColor="{DynamicResource SecondaryLabel}">
-                        <Label.Margin>
-                            <OnPlatform x:TypeArguments="Thickness">
-                                <On Platform="iOS" Value="-4,6,0,0" />
-                                <On Platform="Android" Value="2,9,0,0" />
-                            </OnPlatform>
-                        </Label.Margin>
-                    </Label>
-                </StackLayout>
-                <StackLayout.Margin>
-                    <OnPlatform x:TypeArguments="Thickness">
-                        <On Platform="iOS" Value="6,-10,0,0" />
-                        <On Platform="Android" Value="14,-10,0,0" />
-                    </OnPlatform>
-                </StackLayout.Margin>
-            </StackLayout>
+		<!-- Item Flex Container -->
+		<StackLayout Orientation="Horizontal" Spacing="0">
 
-            <Image
-                Grid.Row="0"
-                Grid.RowSpan="2"
-                Grid.Column="2"
-                Margin="12,7,17,0"
-                VerticalOptions="CenterAndExpand">
-                <Image.Source>
-                    <VapoliaSVG:SvgImageSource
-                        Width="52"
-                        Height="52"
-                        Source="{Binding IconRight}" />
-                </Image.Source>
-            </Image>
+			<ContentView>
+				<!-- Item Logo / Extension Flex Container -->
+				<FlexLayout Direction="Column"
+								AlignItems="Start"
+								JustifyContent="Start">
+					<Frame
+						Padding="0,0,0,0"
+						Margin="0,0,0,0"
+					
+						CornerRadius="6"
+						IsClippedToBounds="True"
+						HasShadow="False">
+						<Image
+							HeightRequest="40"
+							WidthRequest="40"
+							Source="{Binding ShowLogoUrl}"
+							VerticalOptions="CenterAndExpand" />
+					</Frame>
+				</FlexLayout>
+			</ContentView>
 
-            <!--<BoxView
-                Grid.Row="2"
-                Grid.Column="0"
-                Grid.ColumnSpan="3"
-                HeightRequest="1"
-                Margin="12,0,12,4"
-                Color="{DynamicResource OpaqueSeparator}" />-->
-        </Grid>
+			<!-- Item Description Flex Container -->
+			<FlexLayout Direction="Column"
+								AlignItems="Start"
+								JustifyContent="Start" HorizontalOptions="FillAndExpand" Margin="16,0,0,0">
 
-        <Frame.GestureRecognizers>
-             <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
-        </Frame.GestureRecognizers>
-    </Frame>
+				<ContentView>
+					<FlexLayout Direction="Column"
+									AlignItems="Start"
+									JustifyContent="Start" Padding="0,0,0,2">
+
+						<Label
+										Style="{DynamicResource caption1}"
+										Text="{Binding ShowClassification}"
+										TextColor="{DynamicResource SecondaryLabel}">
+						</Label>
+
+						<Label
+									LineBreakMode="MiddleTruncation"
+									Style="{DynamicResource bodySmallSemibold}"
+									Text="{Binding ShowTitle}">
+						</Label>
+					</FlexLayout>
+				</ContentView>
+
+
+				<ContentView>
+					<!-- Show Country City Flex Container -->
+					<FlexLayout Direction="Row"
+									AlignItems="Start"
+									JustifyContent="Start">
+						<Image WidthRequest="17" HeightRequest="17" Margin="0,3,8,0">
+							<Image.Source>
+								<VapoliaSVG:SvgImageSource
+														x:Name="InnerCountrySvgImage"
+														Source="{Binding CountryImage}" />
+							</Image.Source>
+						</Image>
+
+						<Label
+										Style="{DynamicResource caption1}"
+										Text="{Binding SubText}"
+										TextColor="{DynamicResource SecondaryLabel}">
+						</Label>
+					</FlexLayout>
+				</ContentView>
+
+			</FlexLayout>
+
+			<ContentView>
+				<!-- Icon Right Flex Container -->
+				<FlexLayout Direction="Column"
+								AlignItems="Center"
+								JustifyContent="Center" Padding="12,0,0,0">
+					<Image
+									Margin="0"
+									WidthRequest="24"
+									HeightRequest="24"
+									VerticalOptions="CenterAndExpand">
+						<Image.Source>
+							<VapoliaSVG:SvgImageSource
+													Source="{Binding IconRight}" />
+						</Image.Source>
+					</Image>
+				</FlexLayout>
+			</ContentView>
+
+		</StackLayout>
+
+
+		<Frame.GestureRecognizers>
+			<TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+		</Frame.GestureRecognizers>
+	</Frame>
 </ContentView>

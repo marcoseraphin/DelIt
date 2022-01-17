@@ -25,6 +25,7 @@
         <None Remove="SVGResources\HeadCircleCheck %28copy%29.svg" />
         <None Remove="ContentViews\" />
         <None Remove="SVGResources\germany.svg" />
+        <None Remove="SVGResources\chevron_down_gray.svg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Themes\" />
@@ -41,6 +42,7 @@
         <EmbeddedResource Include="SVGResources\HeadCircleCheck.svg" />
         <EmbeddedResource Include="SVGResources\HeadCircleDeclined.svg" />
         <EmbeddedResource Include="SVGResources\germany.svg" />
+        <EmbeddedResource Include="SVGResources\chevron_down_gray.svg" />
   </ItemGroup>
   <ItemGroup>
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Views\PermissionsGrantedPage %28Kopie%29.xaml.cs">

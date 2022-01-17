@@ -35,10 +35,20 @@
                             Margin="20,0,20,16"
                             ShowLogoUrl="ShowIcon.png"
                             ShowCountry="de-DE"
-                            IconRight="ArrowRight.svg"
+                            IconRight="chevron_down_gray.svg"
                             ShowTitle="Sweden Horse Show"
-                            SubText="Göteborg 23.-25.Feb 22"
-                            Command="{Binding SelectShowCommand}"/>
+                            SubText="Göteborg 23.-25. Feb 22"
+                            Command="{Binding SelectShowCommand}" />
+
+              <cv:ShowItemCV
+                            Margin="20,0,20,16"
+                            ShowLogoUrl="ShowIcon.png"
+                            ShowCountry="de-DE"
+                            IconRight="chevron_down_gray.svg"
+                            ShowClassification="Optional Classification"
+                            ShowTitle="Sweden Horse Show"
+                            SubText="Göteborg 23.-25. Feb 22"
+                            Command="{Binding SelectShowCommand}" />
 
                 <Label Text="Start developing now" FontSize="Title"/>
                 <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="0,0,0,0"/>
