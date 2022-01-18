@@ -25,7 +25,6 @@
 					<Frame
 						Padding="0,0,0,0"
 						Margin="0,0,0,0"
-					
 						CornerRadius="6"
 						IsClippedToBounds="True"
 						HasShadow="False">
@@ -43,46 +42,51 @@
 								AlignItems="Start"
 								JustifyContent="Start" HorizontalOptions="FillAndExpand" Margin="16,0,0,0">
 
-				<ContentView>
-					<FlexLayout Direction="Column"
-									AlignItems="Start"
-									JustifyContent="Start" Padding="0,0,0,2">
-
-						<Label
+				<StackLayout Orientation="Vertical" Padding="0,0,0,0" Margin="0,0,0,4" Spacing="0">
+					<Label
+										x:Name="ShowClassificationLabel"
+										IsVisible="false"
 										Style="{DynamicResource caption1}"
 										Text="{Binding ShowClassification}"
-										TextColor="{DynamicResource SecondaryLabel}">
-						</Label>
+										TextColor="{DynamicResource SecondaryLabel}"
+										LineHeight="1">
+						<Label.Margin>
+							<OnPlatform x:TypeArguments="Thickness">
+								<On Platform="iOS" Value="0,0,0,3" />
+								<On Platform="Android" Value="0" />
+							</OnPlatform>
+						</Label.Margin>
+					</Label>
 
-						<Label
+					<Label
 									LineBreakMode="MiddleTruncation"
 									Style="{DynamicResource bodySmallSemibold}"
-									Text="{Binding ShowTitle}">
-						</Label>
-					</FlexLayout>
-				</ContentView>
+									Text="{Binding ShowTitle}"
+									LineHeight="1">
+					</Label>
+				</StackLayout>
 
 
-				<ContentView>
-					<!-- Show Country City Flex Container -->
-					<FlexLayout Direction="Row"
-									AlignItems="Start"
-									JustifyContent="Start">
-						<Image WidthRequest="17" HeightRequest="17" Margin="0,3,8,0">
-							<Image.Source>
-								<VapoliaSVG:SvgImageSource
-														x:Name="InnerCountrySvgImage"
-														Source="{Binding CountryImage}" />
-							</Image.Source>
-						</Image>
+				<!-- Show Country City Flex Container -->
+				<StackLayout Orientation="Horizontal" Spacing="0">
+					<Frame HasShadow="False" Margin="0,0,6,0" Padding="0">
+						<Frame HasShadow="False" Margin="0" VerticalOptions="Center" Padding="0" WidthRequest="17" HeightRequest="11" IsClippedToBounds="True" CornerRadius="2">
+							<Image Margin="0">
+								<Image.Source>
+									<VapoliaSVG:SvgImageSource
+																x:Name="InnerCountrySvgImage"
+																Source="{Binding CountryImage}" />
+								</Image.Source>
+							</Image>
+						</Frame>
+					</Frame>
 
-						<Label
+					<Label
 										Style="{DynamicResource caption1}"
 										Text="{Binding SubText}"
-										TextColor="{DynamicResource SecondaryLabel}">
-						</Label>
-					</FlexLayout>
-				</ContentView>
+										TextColor="{DynamicResource SecondaryLabel}" LineHeight="1">
+					</Label>
+				</StackLayout>
 
 			</FlexLayout>
 
